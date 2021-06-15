@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BankingProjectV3 Suite">
+	<listeners>
+		<listener class-name="com.banking.listeners.ExtentReportListener"></listener>
+	</listeners>
+	<test thread-count="5" name="BankingApp Login Test">
+		<classes>
+			<class name="com.banking.tests.login.LoginTest" />
+			<class name="com.banking.tests.login.LogoutTest" />
+
+		</classes>
+	</test>
+	<test thread-count="5" name="BankingApp Balance Test">
+		<classes>
+			<class name="com.banking.tests.balance.BalanceEnquiryTest" />
+			<class name="com.banking.tests.deposit.DepositTest" />
+			<class name="com.banking.tests.withdrawal.WithdrawalTest" />
+
+		</classes>
+	</test>
+</suite> <!-- Suite -->
